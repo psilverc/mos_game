@@ -12,13 +12,17 @@
 맵 랜덤 생성 (일단 리스트로 표현해봄.)
 
 import random
+
 a = [[" " for i in range(7)] for i in range(7)]
+
 def map(): # 맵 그리기
     for i in range(7):
         print(a[i])
+        
 y = 3
 x = 3
 a[y][x] = "1" # 시작방
+
 def range_out_x(x): # 리스트 범위 바깥으로 나가는 거 방지
     if x < 0:
         return x + 1
@@ -33,6 +37,7 @@ def range_out_y(y): # 리스트 범위 바깥으로 나가는 거 방지
         return y - 1
     else:
         return y
+        
 n = 1 # 일반방(시작방 포함) 개수
 while n < 6: # 방 개수를 6으로 맞추기 위한 장치
     num = random.randint(1,100) # 확률을 표현하고 싶었음...
