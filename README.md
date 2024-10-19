@@ -39,8 +39,11 @@ def range_out_y(y): # 리스트 범위 바깥으로 나가는 거 방지
         return y
         
 n = 1 # 일반방(시작방 포함) 개수
+
 while n < 6: # 방 개수를 6으로 맞추기 위한 장치
+
     num = random.randint(1,100) # 확률을 표현하고 싶었음...
+    
     if num <= 50: # 50% 확률로 y축 방향으로 연결되게 방 생성 (중복 생성 가능)
         y = random.randint(y-1,y+1)
         y = range_out_y(y)
@@ -49,6 +52,7 @@ while n < 6: # 방 개수를 6으로 맞추기 위한 장치
         x = random.randint(x-1,x+1)
         x = range_out_x(x)
         a[y][x] = '1'
+        
     n = 0
     for i in range(7): # 방 개수 확인
         for j in range(7):
