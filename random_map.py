@@ -70,7 +70,7 @@ for i in spe_duplicity:
 
 random.shuffle(candidate_spe)
 
-confirm_spe = [] # 
+confirm_spe = [] # 특별방 확정 좌표 (3개)
 for i in range(3):
     confirm_spe.append(candidate_spe[i])
 
